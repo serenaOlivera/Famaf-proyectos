@@ -1,5 +1,7 @@
+import Data.List (iterate')
 --Preguntas:
 -- Ejercicio 6 e, porque el 2 no es primo?
+-- Pregunar si aunque en las funciones que tenemos que definir no se puede usar recursion ni casos, ¿podemos usarlos en las funciones que definimos para que ande?
 
 --Ejercicio 1 
 
@@ -334,3 +336,23 @@ factorial2 g = productoria [1..g]
 --g)
 --g) Programar la funcion multiplicaPrimos :: [Int] -> Int que calcula el producto
 --de todos los numeros primos de una lista.
+
+
+
+
+--h)
+--h) Programar la funci ́on esFib :: Int -> Bool, que dado un entero n, devuelve True
+--si y solo si n esta en la sucesion de Fibonacci.
+
+--fibonacci es la suma de los 2 ultimos numeros, entonces defino el 0, y defino el 1 y luego la suma de los n
+-- fiajte de usar elem y iterate o zipwith 
+-- zipwith (+) suma los elementos que le des, como yo puse el 0 y el 1 concatenados, entonces se van a ir sumando a medida que me de mas numeros
+-- el tail
+ 
+fibo ::Int -> Int
+fibo 0 = 0 
+fibo 1 = 1
+fibo 2 = 2
+fibo n =  (n-1) + (n-2)
+
+--usar elem en esFib
