@@ -343,8 +343,11 @@ factorial2 g = productoria [1..g]
 --g)
 --g) Programar la funcion multiplicaPrimos :: [Int] -> Int que calcula el producto
 --de todos los numeros primos de una lista.
+lesPremes :: Int -> Int
+lesPremes g =  esPrimo g = g || not esPrimo g = 1
 
-
+--multiplicaPrimos :: [Int] -> Int
+--multiplicaPrimos (g:gs) = lesPremes g * gs
 
 
 --h)
