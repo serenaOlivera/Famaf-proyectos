@@ -1,7 +1,12 @@
 import Data.List (iterate')
+
+
 --Preguntas:
 -- Ejercicio 6 e, porque el 2 no es primo?
--- Pregunar si aunque en las funciones que tenemos que definir no se puede usar recursion ni casos, ¿podemos usarlos en las funciones que definimos para que ande?
+-- Pregunar si aunque en las funciones que tenemos que definir no se puede usar recursion ni casos,
+-- ¿podemos usarlos en las funciones que definimos para que ande?
+--preguntar por 6g y 6h
+--Hacer el hi
 
 --Ejercicio 1 
 
@@ -308,6 +313,8 @@ existeDivisor z (l:ls) = existe' (l:ls) (divisor z)
 --Ayuda: En Haskell se puede escribir la lista que contiene el rango de numeros entre n y m como [n..m]
 
 esPrimo :: Int -> Bool
+esPrimo 1 = False
+esPrimo 2 = True
 esPrimo g = not (existeDivisor g [2..g-1])
 
 --Ejemplos
@@ -341,18 +348,107 @@ factorial2 g = productoria [1..g]
 
 
 --h)
---h) Programar la funci ́on esFib :: Int -> Bool, que dado un entero n, devuelve True
+--h) Programar la funcion esFib :: Int -> Bool, que dado un entero n, devuelve True
 --si y solo si n esta en la sucesion de Fibonacci.
 
---fibonacci es la suma de los 2 ultimos numeros, entonces defino el 0, y defino el 1 y luego la suma de los n
--- fiajte de usar elem y iterate o zipwith 
--- zipwith (+) suma los elementos que le des, como yo puse el 0 y el 1 concatenados, entonces se van a ir sumando a medida que me de mas numeros
--- el tail
+{-fibonacci es la suma de los 2 ultimos numeros, entonces defino el 0, y defino el 1 y luego la suma de los n
+fiajte de usar elem y iterate o zipwith 
+zipwith (+) suma los elementos que le des, como yo puse el 0 y el 1 concatenados, entonces se van a ir sumando a medida que me de mas numeros
+el tail
+fijate de escribir fibonacci
+vos ingresas n y los ibonacii son x. que se detenga cuando x > n y que diga si x = n 
+-}
  
-fibo ::Int -> Int
+{-fibo ::Int -> Int
 fibo 0 = 0 
 fibo 1 = 1
 fibo 2 = 2
 fibo n =  (n-1) + (n-2)
-
+-}
 --usar elem en esFib
+--hacer h e i
+
+
+
+
+--Ejercicio 7
+--Indaga en Hoogle sobre las funciones map y filter. Tambien podes consultar su tipo en
+--ghci con el comando :t.
+
+{- a)
+¿Que hacen estas funciones?
+
+map es del tipo (a -> b) -> [a] -> [b]. Lo que hace es tomar una función f y una lista y devuelve otra lista,
+con la función f aplicada
+filter, por otro lado, toma una función f y una lista (como map) pero devuelve una lista con los elementos
+que cumplen f
+
+b)
+¿A que equivale la expresion map succ [1, -4, 6, 2, -8], donde succ n = n+1?
+
+lo que va a hacer esta expresión es sumarle uno, a cada elemento de la lista. Es decir:
+[2, -3, 7, 3, -7]
+
+c)
+¿Y la expresion filter esPositivo [1, -4, 6, 2, -8]?
+
+Esta función va a devolver solo los números positivos de la lista, es decir:
+[1, 6, 2]
+-}
+
+{- Ejercicio 8
+Programa una funcion que dada una lista de numeros xs, devuelve la lista que resulta de
+duplicar cada valor de xs.
+a) Definila usando recursion.
+b) Definila utilizando la funcion map.
+-}
+
+
+--a)
+dumplingCursed :: [Int] -> [Int]
+dumplingCursed [] = []
+dumplingCursed (g:gs) = (g * 2) : dumplingCursed gs
+
+{-Ejemplillos:
+ghci> dumplingCursed [1,3,4,7]
+[2,6,8,14]
+ghci> dumplingCursed [6,9,3,2]
+[12,18,6,4]
+-}
+
+-- b)
+dumpling :: Int -> Int
+dumpling n = n * 2
+
+dumplingMapa :: [Int] -> [Int]
+dumplingMapa (g:gs) = map dumpling (g:gs)
+
+{-Ejemplillos
+ghci> dumplingMapa [1, 5, 6, 3]
+[2,10,12,6]
+ghci> dumplingMapa [(-5), 7, 12, 98]
+[-10,14,24,196
+-}
+
+{-Ejercicio 9
+Programa una funcion que dada una lista de numeros xs, calcula una lista que tiene como
+elementos aquellos numeros de xs que son primos.
+a) Definila usando recursion.
+b) Definila utilizando la funcion filter.
+c) Revisa tu definicion del ejercicio 6g. ¿Como podes mejorarla?
+-}
+
+--a)
+
+
+
+{- Ejercicio 10
+La funcion primIgualesA toma un valor y una lista, y calcula el tramo inicial mas largo de
+la lista cuyos elementos son iguales a ese valor. Por ejemplo:
+primIgualesA 3 [3,3,4,1] = [3,3]
+primIgualesA 3 [4,3,3,4,1] = []
+primIgualesA 3 [] = []
+primIgualesA ’a’ "aaadaa" = "aaa"
+a) Programa primIgualesA por recursion.
+b) Programa nuevamente la funcion utilizando takeWhile.
+-}
