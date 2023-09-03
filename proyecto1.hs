@@ -257,9 +257,18 @@ todosPares (g:gs) = paraTodo' (g:gs) (pares)
 --b)
 --hayMultiplo :: Int -> [Int] -> Bool verifica si existe algun numero dentro del
 --segundo parametro que sea multiplo del primer parametro.
-
+--Escribo una función auxiliar que me dice si mi g es multiplo de mi n
 esMulti ::Int -> Int -> Bool
 esMulti n g = mod g n == 0 
+
+{-Ejemplos
+ghci> esMulti 10 5
+False
+ghci> esMulti 5 10
+True
+ghci> esMulti 7 14
+True
+-}
 
 hayMultiplo :: Int -> [Int] -> Bool
 hayMultiplo n (g:gs) = existe' (g:gs) (esMulti n) 
@@ -277,9 +286,19 @@ hayMultiplo n (g:gs) = existe' (g:gs) (esMulti n)
 --sumaCuadrados :: Int -> Int, dado un numero no negativo n, calcula la suma de
 --los primeros n cuadrados
 --Ayuda: En Haskell se puede escribir la lista que contiene el rango de numeros entre n y m como [n..m]. 
+--Creo una función auxiliar que me calcule el cuadrado de un número
 
 cuadrados :: Int -> Int
 cuadrados i = i*i
+
+{-Ejemplos:
+ghci> esMulti 10 5
+False
+ghci> esMulti 5 10
+True
+ghci> esMulti 7 14
+True
+-}
 
 sumaCuadrados :: Int -> Int
 sumaCuadrados m = sumatoria' [0..m] cuadrados
@@ -293,6 +312,7 @@ sumaCuadrados m = sumatoria' [0..m] cuadrados
 --d)
 --Programar la fucion existeDivisor::Int-> [Int] -> Bool, que dado en entero n
 --y una lista ls , devuelve True si y solo si, existe algun elemento en ls que divida a n.
+--Creo una función auxiliar que me diga si m es divisor de r
 
 divisor :: Int -> Int -> Bool
 divisor m r = mod m r == 0 
@@ -344,6 +364,7 @@ factorial2 g = productoria [1..g]
 --g)
 --g) Programar la funcion multiplicaPrimos :: [Int] -> Int que calcula el producto
 --de todos los numeros primos de una lista.
+--Hago una función auxiliar que me diga si un g es primo 
 lesPremes :: Int -> Int
 lesPremes g | esPrimo g = g
             | not (esPrimo g) = 1
@@ -352,6 +373,10 @@ multiplicaPrimos :: [Int] -> Int
 multiplicaPrimos (g:gs) = productoria' (g:gs) lesPremes
 
 {- Ejemplos
+ghci> multiplicaPrimos [2,4,3,6,5]
+30
+ghci> multiplicaPrimos [9,7,10,11]     
+77
 -}
 
 
@@ -360,33 +385,71 @@ multiplicaPrimos (g:gs) = productoria' (g:gs) lesPremes
 
 {-fibonacci es la suma de los 2 ultimos numeros, entonces defino el 0, y defino el 1 y luego la suma de los n
 fiajte de usar elem y zipwith 
-zipwith (+) suma los elementos que le des, como yo puse el 0 y el 1 concatenados, entonces se van a ir sumando a medida que me de mas numeros
-el tail
-fijate de escribir fibonacci
-vos ingresas n y los fibonacci son x. que se detenga cuando x > n y que diga si x = n 
-takewhile ??
 -}
  
-
+-- Creo una función que me de el elemento en la sucesión de fibonacci en la g-ésima posición
 suceFib :: Int -> Int
 suceFib 0 = 1
 suceFib 1 = 1
 suceFib 2 = 2   
 suceFib g = suceFib (g-1) + suceFib (g-2)   
       
-
-listaFib :: INt -> [Int]
-listaFib 0 = []
-listaFib g = listaFib (g-1) : suceFib g    
-
-{-
-esFib :: Int -> Bool
-esFib n = n 'elem' suceFib n
+{-Ejemplos:
+ghci> suceFib 3
+3
+ghci> suceFib 4
+5
+ghci> suceFib 5
+8
 -}
---usr elem en esFib
---hacer h e i
+
+listaFib :: Int -> [Int] 
+listaFib 0 = []
+listaFib g = suceFib g : listaFib (g-1)  
+
+{- Ejemplos:
+ghci> listaFib 6 
+[13,8,5,3,2,1]
+ghci> listaFib 25
+[121393,75025,46368,28657,17711,10946,6765,4181,2584,1597,987,610,377,233,144,89,55,34,21,13,8,5,3,2,1]
+-}
+
+esFib :: Int -> Bool
+esFib n = n `elem` listaFib n
+
+{-Ejemplos
+ghci> esFib 7
+False
+ghci> esFib 0
+False
+ghci> esFib 8
+True
+ghci> esFib 13
+True
+ghci> esFib 15
+False
+-}
 
 
+{-i)
+ Utilizando la funcion del apartado anterior, definı la funcion todosFib :: [Int] -> Bool
+que dada una lista xs de enteros, devuelva si todos los elementos de la lista pertenecen
+(o no) a la sucesion de Fibonacci.
+-}
+
+todosFib :: [Int] -> Bool
+todosFib (g:gs) = paraTodo' (g:gs) esFib
+
+{-Ejemplos:
+ghci> todosFib [2,3,5,7]
+False
+ghci> todosFib [6,7,13,8]
+False
+ghci> todosFib [2,3,5,7] 
+False
+ghci> todosFib [2,3,5,8] 
+True
+-}
 
 
 --Ejercicio 7
@@ -461,14 +524,37 @@ primitos :: [Int] -> [Int]
 primitos [] = []
 primitos (g:gs) | esPrimo g = g : primitos gs
                 | not (esPrimo g) = primitos gs 
+
+{-Ejemplos:
+ghci> primitos [2,4,6,7,5,18,3,32,65]
+[2,7,5,3]
+ghci> primitos [76,98,34,53,66,12,11,45]
+[53,11]
+-}
                 
 --b)
 primitosFiltrados :: [Int] -> [Int]
 primitosFiltrados (g:gs) = filter esPrimo (g:gs)
 
+{-Ejemplos
+ghci> primitosFiltrados [76,98,34,53,66,12,11,45]
+[53,11]
+ghci> primitosFiltrados [2,4,6,7,5,18,3,32,65]
+[2,7,5,3]
+ghci> primitosFiltrados [6,87,93,53,76,9]        
+[53]
+-}
+
 --c)
 multiplicaPrimos2 :: [Int] -> Int
 multiplicaPrimos2 (g:gs) = productoria (filter esPrimo (g:gs)) 
+
+{-Ejemplos
+ghci> multiplicaPrimos [3,2,5,7,86,4]
+210
+ghci> multiplicaPrimos [45,765,13,65]
+13
+-}
 
 
 
@@ -490,10 +576,24 @@ primIgualesA n [] = []
 primIgualesA n (g:gs) | (n == g) = g : primIgualesA n gs
                       | (n /= g)  = primIgualesA n []
 
+{-Ejemplos
+ghci> primIgualesA 5 [5,5,5,6,5,5]
+[5,5,5]
+ghci> primIgualesA 5 [5,6,5,5]    
+[5]
+ghci> primIgualesA (-5) [5,6,5,5]
+[]
+ghci> primIgualesA (-5) [(-5),(-5),6,5,5]
+[-5,-5]
+-}
+
 --b)
 
 primIgualesA2 ::(Eq a) => a -> [a] -> [a]
 primIgualesA2 n (g:gs) = takeWhile (== n) (g:gs)
+
+{-Ejemplos
+-}
 
 {- Ejercicio 11
 La funcion primIguales toma una lista y devuelve el mayor tramo inicial de la lista cuyos
@@ -510,11 +610,37 @@ dividir en casos, pero no usar recursion.
 --a)
 primIguales :: (Eq a) => [a] -> [a]
 primIguales [] = []
-primIguales (g:h:gs) | (g == h) = g : h : primIguales gs
-                     | (g /= h) = g : []
+primIguales (g:h:gs) | (g /= h) = g : []
+                     | (g == h) = g : primIguales (h:gs)
+
+{-Ejemplos:
+ghci> primIguales [3,3,4,1]
+[3,3]
+ghci> primIguales [4,3,3,4,1]
+[4]
+ghci> primIguales "hhola"    
+"hh"
+ghci> primIguales "ssssiuuu" 
+"ssss"
+-}  
+
+
 --b)
 primIguales2 :: (Eq a) => [a] -> [a]
 primIguales2 (g:gs) = primIgualesA g (g:gs)
-                      
+
+{- Ejemplos:
+ghci> primIguales2 "ssssiuuu"
+"ssss"
+ghci> primIguales2  [4,3,3,4,1]
+[4]
+ghci> primIguales2  [7,7,7,4,7,7,7]
+[7,7,7]
+ghci> primIguales2  [7,8,9]        
+[7]
+ghci> primIguales2  "bbbuenas"
+"bbb"
+-}
+          
                       
                       
