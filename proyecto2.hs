@@ -1,3 +1,7 @@
+{-Preguntar:
+Ejercicio 3 c ¿Como defino a Show para que me ande?
+-}
+
 {- Ejercicio 1
 data Carrera = Matematica | Fisica | Computacion | Astronomia
 a) Implementa el tipo Carrera como esta definido arriba
@@ -24,9 +28,17 @@ data Carrera = Matematica | Fisica | Computacion | Astronomia
 titulo :: Carrera -> String
 titulo Matematica = "Licenciatura en Matematica"
 titulo Fisica = "Licenciatura en Fisica"
-titulo Computacion = "Licenciatura en Computacion"
+titulo Computacion = "Licenciatura en Ciencias de la Computacion"
 titulo Astronomia = "Licenciatura en Astronomia"
 
+{- Ejemplos:
+ghci> titulo Computacion
+"Licenciatura en Ciencias de la Computacion"
+ghci> titulo Matematica 
+"Licenciatura en Matematica"
+ghci> titulo Fisica     
+"Licenciatura en Fisica"
+-}
 --c)
 data NotaBasica = Do | Re | Mi 
                 | Fa | Sol | La | Si 
@@ -41,6 +53,15 @@ cifradoAmericano Fa = 'D'
 cifradoAmericano Sol = 'E'
 cifradoAmericano La = 'F'
 cifradoAmericano Si = 'G'
+
+{-Ejemplos :
+ghci> cifradoAmericano Do
+'A'
+ghci> cifradoAmericano Sol
+'E'
+ghci> cifradoAmericano La 
+'F'
+-}
 
 {-Ejercicio 2
 a) Completar la definicion del tipo NotaBasica para que las expresiones
@@ -67,8 +88,17 @@ minimoElemento :: (Eq (a), Ord (a), Show (a)) => [a] -> a
 minimoElemento [g] = g
 minimoElemento (g:h:gs) =  g `min` minimoElemento (h:gs)  
 
+{-Ejemplos :
+ghci> minimoElemento [2,5,3,8,9,1,6,4] 
+1
+ghci> minimoElemento [6,63,56,23,6,0,(-5)] 
+-5
+ghci> minimoElemento [6,63,56,23,6,0]     
+0
+-}
+
 --b)
-minimoElemento' :: (Eq (a), Ord (a), Show (a), Bounded (a)) => [a] -> a
+minimoElemento' :: (Bounded (a), Eq (a), Ord (a) , Show (a)) => [a] -> a
 minimoElemento' [] = minBound 
 minimoElemento' (g:gs)  = g `min` minimoElemento' gs
 
@@ -77,6 +107,54 @@ graveNota :: [NotaBasica] -> NotaBasica
 graveNota [g] = g  
 graveNota (g:gs) = g `min` graveNota gs  
 
+{-Ejemplos :
+ghci> graveNota [Do, Re, Mi, Fa, Sol]
+Do
+ghci> graveNota [ Fa, Sol]
+Fa
+ghci> graveNota [Fa, La, Re]
+-}
+
+{- Ejercicio 4
+a) Implementa el tipo Deportista y todos sus tipos accesorios (NumCamiseta, Altura,
+Zona, etc) tal como estan definidos arriba.
+b) ¿Cual es el tipo del constructor Ciclista?
+c) Programa la funcion contar_velocistas :: [Deportista] -> Int que dada una
+lista de deportistas xs, devuelve la cantidad de velocistas que hay dentro de xs.
+Programar contar_velocistas sin usar igualdad, utilizando pattern matching.
+d) Programa la funcion contar_futbolistas :: [Deportista] -> Zona -> Int que
+dada una lista de deportistas xs, y una zona z, devuelve la cantidad de futbolistas
+incluidos en xs que juegan en la zona z. No usar igualdad, solo pattern matching.
+e) ¿La funcion anterior usa filter? Si no es ası, reprogramala para usarla.
+-}
+
+--a)
+type Altura = Int
+type NumCamiseta = Int
 
 
+data Zona = Arco | Defensa | Mediocampo | Delantera
+data TipoReves = DosManos | UnaMano
+data Modalidad = Carretera | Pista | Monte | BMX
+data PiernaHabil = Izquierda | Derecha
 
+type ManoHabil = PiernaHabil
+
+data Deportista = Ajedrecista 
+                | Ciclista Modalidad 
+                | Velocista Altura 
+                | Tenista TipoReves ManoHabil Altura 
+                | Futbolista Zona NumCamiseta PiernaHabil Altura 
+
+-- b)
+{- El tipo del constructor Ciclista es Modalidad 
+(dentro de este estan definidos los constructores: Carretera, 
+Pista, Monte y BMX
+-}
+
+-- c}
+
+contarVelocistas :: [Deportista] -> Int 
+contarVelocistas (g:gs) | g == x  = 1 + contarVelocistas gs
+                        | g /= x = contarVelocistas gs
+                        where x :: Altura -> Deportista 
