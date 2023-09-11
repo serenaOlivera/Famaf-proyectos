@@ -155,6 +155,48 @@ Pista, Monte y BMX
 -- c}
 
 contarVelocistas :: [Deportista] -> Int 
-contarVelocistas (g:gs) | g == x  = 1 + contarVelocistas gs
-                        | g /= x = contarVelocistas gs
-                        where x :: Altura -> Deportista 
+contarVelocistas [] = 0
+contarVelocistas (Velocista a :gs) =  1 + contarVelocistas gs
+contarVelocistas ( _ : gs) = contarVelocistas gs
+
+{- Ejemplos
+ghci> contarVelocistas [Ajedrecista, Ciclista Monte, Tenista UnaMano Derecha 40]
+0
+ghci> contarVelocistas [Ajedrecista, Ciclista Monte, Tenista UnaMano Derecha 40, Velocista 50]
+1
+ghci> contarVelocistas [Velocista 20, Velocista 40, Ajedrecista]
+2
+ghci> contarVelocistas []
+0
+-}
+
+-- d)
+
+contar_futbolistas :: [Deportista] -> Zona -> Int
+contar_futbolistas [] z = 0
+{-
+contar_futbolistas (g:gs) z = case g of 
+                                Futbolista z _ _ _ -> 1 + contar_futbolistas gs z
+                                _  -> contar_futbolistas gs z
+-}                                 
+
+contar_futbolistas (Futbolista Arco n p a : gs) Arco = 1 + contar_futbolistas gs Arco
+contar_futbolistas (Futbolista Defensa n p a : gs) Defensa = 1 + contar_futbolistas gs Defensa
+contar_futbolistas (Futbolista Mediocampo n p a : gs) Mediocampo = 1 + contar_futbolistas gs Mediocampo
+contar_futbolistas (Futbolista Delantera n p a : gs) Delantera = 1 + contar_futbolistas gs Delantera
+contar_futbolistas ( _ : gs) z = contar_futbolistas gs z
+
+--e) mi funcion no usa filter 
+{-
+zonaFiltrada ::Eq Zona => Deportista -> Zona -> Bool
+zonaFiltrada (Futbolista s n p a) z | s == z = True
+                                    | s /= z = False
+zonaFiltradaa _ z = False
+-}
+
+{-
+contar_futbolistas' :: [Deportista] -> Zona -> Int
+contar_futbolistas' [] z = 0
+contar_futbolistas' 
+-}
+ 
