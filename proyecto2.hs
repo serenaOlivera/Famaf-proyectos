@@ -134,9 +134,13 @@ type NumCamiseta = Int
 
 
 data Zona = Arco | Defensa | Mediocampo | Delantera
+         deriving (Eq, Show)
 data TipoReves = DosManos | UnaMano
+         deriving (Eq, Show)
 data Modalidad = Carretera | Pista | Monte | BMX
+         deriving (Eq, Show)
 data PiernaHabil = Izquierda | Derecha
+         deriving (Eq, Show)
 
 type ManoHabil = PiernaHabil
 
@@ -145,7 +149,7 @@ data Deportista = Ajedrecista
                 | Velocista Altura 
                 | Tenista TipoReves ManoHabil Altura 
                 | Futbolista Zona NumCamiseta PiernaHabil Altura 
-
+        deriving (Eq, Show)      
 -- b)
 {- El tipo del constructor Ciclista es Modalidad 
 (dentro de este estan definidos los constructores: Carretera, 
@@ -174,12 +178,13 @@ ghci> contarVelocistas []
 
 contar_futbolistas :: [Deportista] -> Zona -> Int
 contar_futbolistas [] z = 0
+
 {-
 contar_futbolistas (g:gs) z = case g of 
                                 Futbolista z _ _ _ -> 1 + contar_futbolistas gs z
                                 _  -> contar_futbolistas gs z
--}                                 
-
+-}
+                               
 contar_futbolistas (Futbolista Arco n p a : gs) Arco = 1 + contar_futbolistas gs Arco
 contar_futbolistas (Futbolista Defensa n p a : gs) Defensa = 1 + contar_futbolistas gs Defensa
 contar_futbolistas (Futbolista Mediocampo n p a : gs) Mediocampo = 1 + contar_futbolistas gs Mediocampo
@@ -187,12 +192,12 @@ contar_futbolistas (Futbolista Delantera n p a : gs) Delantera = 1 + contar_futb
 contar_futbolistas ( _ : gs) z = contar_futbolistas gs z
 
 --e) mi funcion no usa filter 
-{-
-zonaFiltrada ::Eq Zona => Deportista -> Zona -> Bool
+
+zonaFiltrada :: Deportista -> Zona -> Bool
 zonaFiltrada (Futbolista s n p a) z | s == z = True
                                     | s /= z = False
-zonaFiltradaa _ z = False
--}
+zonaFiltrada ( _ ) z = False 
+
 
 {-
 contar_futbolistas' :: [Deportista] -> Zona -> Int
