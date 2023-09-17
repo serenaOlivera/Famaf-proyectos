@@ -1,6 +1,5 @@
 -- Serena Olivera
 
--- fijarse 7) 3.
 
 {- Ejercicio 1
 data Carrera = Matematica | Fisica | Computacion | Astronomia
@@ -177,21 +176,26 @@ ghci> contarVelocistas []
 -- d)
 
 contar_futbolistas :: [Deportista] -> Zona -> Int
-contar_futbolistas [] z = 0
-                               
+contar_futbolistas [] z = 0                               
 contar_futbolistas (Futbolista Arco n p a : gs) Arco = 1 + contar_futbolistas gs Arco
 contar_futbolistas (Futbolista Defensa n p a : gs) Defensa = 1 + contar_futbolistas gs Defensa
 contar_futbolistas (Futbolista Mediocampo n p a : gs) Mediocampo = 1 + contar_futbolistas gs Mediocampo
 contar_futbolistas (Futbolista Delantera n p a : gs) Delantera = 1 + contar_futbolistas gs Delantera
 contar_futbolistas ( _ : gs) z = contar_futbolistas gs z
 
+{-Ejemplos
+ghci> contar_futbolistas [(Futbolista  Defensa 5 Derecha  7), (Futbolista Arco 6 Izquierda 76), (Ajedrecista)] Arco       
+1
+ghci> contar_futbolistas [(Futbolista  Arco 5 Derecha  7), (Futbolista Arco 6 Izquierda 76), (Ajedrecista)] Arco   
+2
+-}
 
 --e) mi funcion no usa filter 
 
-zonaFiltrada :: Deportista -> Zona -> Bool
-zonaFiltrada (Futbolista s n p a) z | s == z = True
-                                    | s /= z = False
-zonaFiltrada ( _ ) z = False 
+zonaFiltrada :: Zona -> Deportista -> Bool
+zonaFiltrada z (Futbolista s n p a)  | s == z = True
+                                     | s /= z = False
+zonaFiltrada  z _  = False 
 
 {-Ejemplos:
 ghci> zonaFiltrada Ajedrecista Mediocampo
@@ -202,10 +206,16 @@ ghci> zonaFiltrada (Futbolista Mediocampo 5 Derecha 120) Mediocampo
 True
 -}
 
-{-
+
 contarFutbolistas' :: [Deportista] -> Zona -> Int
 contarFutbolistas' [] z = 0
-contarFutbolistas' (g:gs) z = filter zonaFiltrada (contar_futbolistas' gs z)
+contarFutbolistas' (g:gs) z = length (filter (zonaFiltrada z) (g:gs))
+
+{- Ejemplos:
+ghci> contarFutbolistas'[(Futbolista  Defensa 5 Derecha  7), (Futbolista Arco 6 Izquierda 76), (Ajedrecista)] Arco 
+1
+ghci> contarFutbolistas' [(Futbolista  Arco 5 Derecha  7), (Futbolista Arco 6 Izquierda 76), (Ajedrecista)] Arco   
+2
 -}
 
 -- Ejercicio 5
@@ -244,7 +254,7 @@ data Alteracion = Bemol | Natural | Sostenido deriving (Eq, Ord)
 
 
 -- c) 
-data NotaMusical = Nota  NotaBasica Alteracion  deriving (Eq, Ord)
+data NotaMusical = Nota  NotaBasica Alteracion  
 
 -- d)
 sonidoAlteracion :: Alteracion -> Int
@@ -267,7 +277,13 @@ ghci> sonidoCromatico (Nota Fa Bemol)
 4
 -}
 
--- e) 
+-- e)
+
+instance Eq NotaMusical
+ where
+  (Nota b q) == (Nota a j) = sonidoCromatico (Nota b q) == sonidoCromatico (Nota a j)
+
+
 {-Ejemplos
 ghci> sonidoCromatico (Nota Fa Sostenido) == sonidoCromatico (Nota Sol Bemol)    
 True
@@ -276,6 +292,14 @@ True
 -}
 
 -- f)
+--Incluı el tipo NotaMusical a la clase Ord definiendo el operador <=. Se debe definir
+--que una nota es menor o igual a otra si y solo si el valor de sonidoCromatico para la
+--primera es menor o igual al valor de sonidoCromatico para la segunda
+
+instance Ord NotaMusical
+ where
+      (Nota b q) <= (Nota a j) = sonidoCromatico (Nota b q) <= sonidoCromatico (Nota a j)
+
 {-Ejemplos:
 ghci> (Nota Do Bemol) <= (Nota Do Natural) 
 True
@@ -352,18 +376,139 @@ Encolada Ajedrecista (Encolada (Velocista 40) (Encolada (Ciclista Monte) VaciaC)
 -}
 
 -- 3.
+
 busca :: Cola -> Zona -> Maybe Deportista
 busca VaciaC z = Nothing
 busca (Encolada d c) z = case d of
-                        Futbolista z _ _ _ -> Just d
-                        _ -> busca VaciaC z
+                         (Futbolista z' _ _ _) -> if z == z' then Just d else busca c z
+                         _ -> busca c z
 
-{- ghci> busca (Encolada (Futbolista Defensa 5 Derecha 170) VaciaC) Arco
+
+{- Ejemplos :
+ghci> busca (Encolada (Futbolista Defensa 5 Derecha 170) VaciaC) Arco
+Nothing
+ghci> busca (Encolada (Futbolista Defensa 5 Derecha 170) VaciaC) Defensa
 Just (Futbolista Defensa 5 Derecha 170)
-PORQUE AAAAAAAAAAAAAAA
+ghci> busca (Encolada (Futbolista Defensa 5 Derecha 170) (Encolada (Futbolista Arco 6 Izquierda 180) VaciaC)) Defensa
+Just (Futbolista Defensa 5 Derecha 170)
 -}
 
 -- b)
 {-Cola se parece al tipo de lista, que es lista = Vacía | Agregar Int lista-}
 
 -- Ejercicio 8 
+data ListaAsoc a b = Vacia | Nodo a b (ListaAsoc a b) deriving Show
+
+-- a
+{-¿Como se debe instanciar el tipo ListaAsoc para representar la informacion almacenada
+en una guıa telefonica?
+-}
+type GuiaTelefonica =  ListaAsoc String Int 
+
+-- b)
+{-Programa las siguientes funciones:
+1) la_long :: ListaAsoc a b -> Int que devuelve la cantidad de datos en una
+lista.
+2) la_concat :: ListaAsoc a b -> ListaAsoc a b -> ListaAsoc a b, que devuelve la concatenacion de 
+dos listas de asociaciones.
+3) la_agregar :: Eq a => ListaAsoc a b -> a -> b -> ListaAsoc a b, que
+agrega un nodo a la lista de asociaciones si la clave no esta en la lista, o actualiza
+el valor si la clave ya se encontraba.
+4) la_pares :: ListaAsoc a b -> [(a, b)] que transforma una lista de asociaciones en una lista de pares clave-dato.
+5) la_busca :: Eq a => ListaAsoc a b -> a -> Maybe b que dada una lista
+y una clave devuelve el dato asociado, si es que existe. En caso contrario devuelve
+Nothing.
+6) la_borrar :: Eq a => a -> ListaAsoc a b -> ListaAsoc a b que dada
+una clave a elimina la entrada en la lista.
+-}
+
+-- 1)
+laLong :: ListaAsoc a b -> Int
+laLong Vacia = 0 
+laLong (Nodo a b c) = 1 + (laLong c)
+
+{-
+ghci> laLong (Nodo 1 3 (Nodo  5 6 Vacia))   
+2
+ghci> laLong (Nodo "amen" "abril" (Nodo "h" "o" Vacia))
+2
+ghci> laLong (Vacia)
+0
+-}
+
+-- 2)
+
+laConcat :: ListaAsoc a b -> ListaAsoc a b -> ListaAsoc a b
+laConcat Vacia Vacia = Vacia
+laConcat Vacia (Nodo a b c) = Nodo a b c
+laConcat (Nodo a b c) Vacia = Nodo a b c
+laConcat (Nodo a b c) (Nodo a' b' c') = Nodo a b (laConcat c (Nodo a' b' c'))
+
+{-Ejemplos
+ghci> laConcat (Nodo 1 3 (Nodo  5 6 Vacia)) (Nodo 85 74 Vacia)
+Nodo 1 3 (Nodo 5 6 (Nodo 85 74 Vacia))
+ghci> laConcat (Nodo 1 3 (Nodo  5 6 Vacia))  (Nodo 5467 7687 (Nodo 548 5486 Vacia))
+Nodo 1 3 (Nodo 5 6 (Nodo 5467 7687 (Nodo 548 5486 Vacia)))
+-}
+
+
+-- 3)
+laAgregar :: (Eq a) => ListaAsoc a b -> a -> b -> ListaAsoc a b 
+laAgregar Vacia a' b' =  Nodo a' b' Vacia
+laAgregar (Nodo a b c) a' b' | a == a' = Nodo a b' c
+                             | a /= a' =  Nodo a b (laAgregar c a' b')
+
+{- Ejemplos:
+ghci> laAgregar (Nodo 1 2 Vacia) 1 5           
+Nodo 1 5 Vacia
+ghci> laAgregar (Nodo 1 2 (Nodo 5 6 Vacia)) 1 5
+Nodo 1 5 (Nodo 5 6 Vacia)
+ghci> laAgregar (Nodo 1 2 (Nodo 5 6 Vacia)) 5 5
+Nodo 1 2 (Nodo 5 5 Vacia)
+ghci> laAgregar (Nodo 1 2 (Nodo 5 6 Vacia)) 6 5
+Nodo 1 2 (Nodo 5 6 (Nodo 6 5 Vacia))
+-}
+
+-- 4)
+laPares :: ListaAsoc a b -> [(a, b)]
+laPares Vacia = []
+laPares (Nodo a b c) = (a, b) : laPares c 
+
+{- Ejemplos 
+ghci> laPares Vacia
+[]
+ghci> laPares (Nodo 5 6 (Nodo 3 4 Vacia))
+[(5,6),(3,4)]
+-}
+
+-- 5) 
+
+laBusca :: (Eq a) => ListaAsoc a b -> a -> Maybe b 
+laBusca Vacia a' = Nothing
+laBusca (Nodo a b c) a' = if a' == a then Just b 
+                          else laBusca c a'
+
+{-Ejemplos 
+ghci> laBusca (Nodo 1 3 (Nodo 5 6 Vacia)) 5
+Just 6
+ghci> laBusca (Nodo 1 3 (Nodo 5 6 Vacia)) 1
+Just 3
+ghci> laBusca (Nodo 6 3 (Nodo 5 6 Vacia)) 1
+Nothing
+-}
+
+-- 6)
+
+laBorrar :: Eq a => a -> ListaAsoc a b -> ListaAsoc a b
+laBorrar a' Vacia = Vacia
+laBorrar a' (Nodo a b c) | a == a' = laBorrar a' c
+                         | a /= a' = Nodo a b (laBorrar a' c)
+
+{-Ejemplos:
+ghci> laBorrar 1 (Nodo 5 6 (Nodo 1 3 Vacia))
+Nodo 5 6 Vacia
+ghci> laBorrar 7 (Nodo 5 6 (Nodo 1 3 Vacia))
+Nodo 5 6 (Nodo 1 3 Vacia)
+ghci> laBorrar 7  Vacia                     
+Vacia
+-}
