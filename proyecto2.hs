@@ -97,9 +97,16 @@ ghci> minimoElemento [6,63,56,23,6,0]
 -}
 
 --b)
-minimoElemento' :: (Bounded (a), Eq (a), Ord (a) , Show (a)) => [a] -> a
-minimoElemento' [] = minBound 
-minimoElemento' (g:gs)  = g `min` minimoElemento' gs
+minimoElemento' ::  Eq a => Ord a => Bounded a => [a] -> a
+minimoElemento' [] = maxBound 
+minimoElemento' (g:gs)  = min g  (minimoElemento' gs)
+
+{-Ejemplos 
+ghci> minimoElemento' ([1,5,10]::[Int])
+1
+ghci> minimoElemento' ([]::[Bool])     
+True
+-}
 
 --c)
 graveNota :: [NotaBasica] -> NotaBasica
