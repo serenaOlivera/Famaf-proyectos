@@ -221,7 +221,7 @@ productoria' (g:gs) predicado = predicado g * productoria' gs predicado
 --predicado t.
 
 paraTodo2 :: [Bool] -> Bool
-paraTodo2 (g:gs) = paraTodo' gs id
+paraTodo2 (g:gs) = paraTodo' (g:gs) id
 
 --Ejercicio 6
 --Utilizando las funciones del ejercicio 4, programa las siguientes funciones por composicion,
