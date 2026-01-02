@@ -1,0 +1,988 @@
+!SESSION 2025-05-09 11:57:56.531 -----------------------------------------------
+eclipse.buildId=6.0.1.220831-e4f07d04b8
+java.version=17.0.4
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.omnetpp.main 1 0 2025-05-09 11:58:17.284
+!MESSAGE OMNeT++ IDE 6.0.1.220831-e4f07d04b8 started.
+
+!ENTRY org.python.pydev.shared_core 1 1 2025-05-09 11:58:18.652
+!MESSAGE Restoring info for: /usr/bin/python3
+!STACK 0
+java.lang.RuntimeException: Restoring info for: /usr/bin/python3
+	at org.python.pydev.ast.interpreter_managers.AbstractInterpreterManager.getInterpretersFromPersistedString(AbstractInterpreterManager.java:461)
+	at org.python.pydev.ast.interpreter_managers.AbstractInterpreterManager.internalRecreateCacheGetInterpreterInfos(AbstractInterpreterManager.java:287)
+	at org.python.pydev.ast.interpreter_managers.AbstractInterpreterManager.setInfos(AbstractInterpreterManager.java:584)
+	at org.omnetpp.scave.ScavePlugin.ensurePyDevInterpreterConfigured(ScavePlugin.java:139)
+	at org.omnetpp.scave.ScavePlugin.start(ScavePlugin.java:62)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.lambda$2(BundleContextImpl.java:808)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:802)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:759)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1019)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:365)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:605)
+	at org.eclipse.osgi.container.Module.start(Module.java:468)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:404)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:570)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:335)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:384)
+	at org.eclipse.osgi.internal.loader.sources.SingleSourcePackage.loadClass(SingleSourcePackage.java:41)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass0(BundleLoader.java:471)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:403)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:168)
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.omnetpp.ide.OmnetppStartup.earlyStartup(OmnetppStartup.java:88)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.runEarlyStartup(EarlyStartupRunnable.java:79)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:55)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.Workbench$40.run(Workbench.java:2667)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: Expecting: /home/sere/Famaf/Redes/.metadata/.plugins/org.python.pydev/v1_eqo8on6m6qtijnz6835bycxw5/modulesKeys to exist (and be a file).
+	at org.python.pydev.ast.codecompletion.revisited.ModulesManager.loadFromFile(ModulesManager.java:330)
+	at org.python.pydev.ast.codecompletion.revisited.SystemModulesManager.load(SystemModulesManager.java:443)
+	at org.python.pydev.ast.interpreter_managers.AbstractInterpreterManager.getInterpretersFromPersistedString(AbstractInterpreterManager.java:459)
+	... 28 more
+
+!ENTRY org.python.pydev.shared_core 1 1 2025-05-09 11:58:18.820
+!MESSAGE Finished restoring information for: /usr/bin/python3 at: /home/sere/Famaf/Redes/.metadata/.plugins/org.python.pydev/v1_eqo8on6m6qtijnz6835bycxw5
+!STACK 0
+java.lang.RuntimeException: Finished restoring information for: /usr/bin/python3 at: /home/sere/Famaf/Redes/.metadata/.plugins/org.python.pydev/v1_eqo8on6m6qtijnz6835bycxw5
+	at org.python.pydev.core.log.Log.logInfo(Log.java:45)
+	at org.python.pydev.ast.interpreter_managers.AbstractInterpreterManager.getInterpretersFromPersistedString(AbstractInterpreterManager.java:506)
+	at org.python.pydev.ast.interpreter_managers.AbstractInterpreterManager.internalRecreateCacheGetInterpreterInfos(AbstractInterpreterManager.java:287)
+	at org.python.pydev.ast.interpreter_managers.AbstractInterpreterManager.setInfos(AbstractInterpreterManager.java:584)
+	at org.omnetpp.scave.ScavePlugin.ensurePyDevInterpreterConfigured(ScavePlugin.java:139)
+	at org.omnetpp.scave.ScavePlugin.start(ScavePlugin.java:62)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.lambda$2(BundleContextImpl.java:808)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:802)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:759)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1019)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:365)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:605)
+	at org.eclipse.osgi.container.Module.start(Module.java:468)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:404)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:570)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:335)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:384)
+	at org.eclipse.osgi.internal.loader.sources.SingleSourcePackage.loadClass(SingleSourcePackage.java:41)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass0(BundleLoader.java:471)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:403)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:168)
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.omnetpp.ide.OmnetppStartup.earlyStartup(OmnetppStartup.java:88)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.runEarlyStartup(EarlyStartupRunnable.java:79)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:55)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.Workbench$40.run(Workbench.java:2667)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.python.pydev.shared_core 4 4 2025-05-09 11:58:25.985
+!MESSAGE Info: Rebuilding internal caches: /home/sere/Famaf/Redes/.metadata/.plugins/com.python.pydev.analysis/python_v1_eqo8on6m6qtijnz6835bycxw5/python.pydevsysteminfo (Expected error to be provided and got no error!)
+!SESSION 2025-05-09 19:05:39.045 -----------------------------------------------
+eclipse.buildId=6.0.1.220831-e4f07d04b8
+java.version=17.0.4
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  /home/sere/Famaf/Redes/redes25lab3g21/results
+Command-line arguments:  -os linux -ws gtk -arch x86_64 /home/sere/Famaf/Redes/redes25lab3g21/results
+
+!ENTRY org.omnetpp.main 1 0 2025-05-09 19:06:22.337
+!MESSAGE OMNeT++ IDE 6.0.1.220831-e4f07d04b8 started.
+!SESSION 2025-05-09 19:07:26.979 -----------------------------------------------
+eclipse.buildId=6.0.1.220831-e4f07d04b8
+java.version=17.0.4
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.omnetpp.main 1 0 2025-05-09 19:07:35.203
+!MESSAGE OMNeT++ IDE 6.0.1.220831-e4f07d04b8 started.
+
+!ENTRY org.omnetpp.scave 2 0 2025-05-09 19:24:48.016
+!MESSAGE No Scave editor state was saved for file: /home/sere/Famaf/Redes/redes25lab3g21/General.anf.
+!SESSION 2025-05-09 21:55:51.398 -----------------------------------------------
+eclipse.buildId=6.0.1.220831-e4f07d04b8
+java.version=17.0.4
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.omnetpp.main 1 0 2025-05-09 21:55:58.417
+!MESSAGE OMNeT++ IDE 6.0.1.220831-e4f07d04b8 started.
+!SESSION 2025-05-09 23:04:47.640 -----------------------------------------------
+eclipse.buildId=6.0.1.220831-e4f07d04b8
+java.version=17.0.4
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.omnetpp.main 1 0 2025-05-09 23:04:55.631
+!MESSAGE OMNeT++ IDE 6.0.1.220831-e4f07d04b8 started.
+!SESSION 2025-05-09 23:08:00.341 -----------------------------------------------
+eclipse.buildId=6.0.1.220831-e4f07d04b8
+java.version=17.0.4
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.omnetpp.main 1 0 2025-05-09 23:08:06.256
+!MESSAGE OMNeT++ IDE 6.0.1.220831-e4f07d04b8 started.
+
+!ENTRY org.omnetpp.scave 2 0 2025-05-09 23:09:47.199
+!MESSAGE No Scave editor state was saved for file: /home/sere/Famaf/Redes/redes25lab3g21/results/General.anf.
+
+!ENTRY org.omnetpp.scave 4 0 2025-05-09 23:12:54.835
+!MESSAGE Error during exporting results:
+!STACK 0
+java.lang.RuntimeException: Error writing CSV file
+	at org.omnetpp.scave.engine.ScaveEngineJNI.Exporter_saveResults__SWIG_0(Native Method)
+	at org.omnetpp.scave.engine.Exporter.saveResults(Exporter.java:56)
+	at org.omnetpp.scave.wizard.ScaveExportWizard.lambda$1(ScaveExportWizard.java:172)
+	at org.omnetpp.scave.engine.ResultFileManager.runWithLock(ResultFileManager.java:105)
+	at org.omnetpp.scave.engine.ResultFileManager.runWithReadLock(ResultFileManager.java:94)
+	at org.omnetpp.scave.wizard.ScaveExportWizard.lambda$0(ScaveExportWizard.java:172)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY org.omnetpp.scave 4 0 2025-05-09 23:13:30.244
+!MESSAGE Error during exporting results:
+!STACK 0
+java.lang.RuntimeException: Error writing CSV file
+	at org.omnetpp.scave.engine.ScaveEngineJNI.Exporter_saveResults__SWIG_0(Native Method)
+	at org.omnetpp.scave.engine.Exporter.saveResults(Exporter.java:56)
+	at org.omnetpp.scave.wizard.ScaveExportWizard.lambda$1(ScaveExportWizard.java:172)
+	at org.omnetpp.scave.engine.ResultFileManager.runWithLock(ResultFileManager.java:105)
+	at org.omnetpp.scave.engine.ResultFileManager.runWithReadLock(ResultFileManager.java:94)
+	at org.omnetpp.scave.wizard.ScaveExportWizard.lambda$0(ScaveExportWizard.java:172)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+!SESSION 2025-05-09 23:19:33.186 -----------------------------------------------
+eclipse.buildId=6.0.1.220831-e4f07d04b8
+java.version=17.0.4
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.omnetpp.main 1 0 2025-05-09 23:19:40.236
+!MESSAGE OMNeT++ IDE 6.0.1.220831-e4f07d04b8 started.
+
+!ENTRY org.omnetpp.scave 4 0 2025-05-09 23:22:51.872
+!MESSAGE Error during exporting results:
+!STACK 0
+java.lang.RuntimeException: Error writing CSV file
+	at org.omnetpp.scave.engine.ScaveEngineJNI.Exporter_saveResults__SWIG_0(Native Method)
+	at org.omnetpp.scave.engine.Exporter.saveResults(Exporter.java:56)
+	at org.omnetpp.scave.wizard.ScaveExportWizard.lambda$1(ScaveExportWizard.java:172)
+	at org.omnetpp.scave.engine.ResultFileManager.runWithLock(ResultFileManager.java:105)
+	at org.omnetpp.scave.engine.ResultFileManager.runWithReadLock(ResultFileManager.java:94)
+	at org.omnetpp.scave.wizard.ScaveExportWizard.lambda$0(ScaveExportWizard.java:172)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+!SESSION 2025-05-09 23:37:37.095 -----------------------------------------------
+eclipse.buildId=6.0.1.220831-e4f07d04b8
+java.version=17.0.4
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.omnetpp.main 1 0 2025-05-09 23:37:45.299
+!MESSAGE OMNeT++ IDE 6.0.1.220831-e4f07d04b8 started.
+
+!ENTRY org.omnetpp.scave 4 0 2025-05-09 23:39:50.577
+!MESSAGE Error during exporting results:
+!STACK 0
+java.lang.RuntimeException: Vector file "/home/sere/Famaf/Redes/redes25lab3g21/results/General-#0.vec" changed on disk
+	at org.omnetpp.scave.engine.ScaveEngineJNI.Exporter_saveResults__SWIG_0(Native Method)
+	at org.omnetpp.scave.engine.Exporter.saveResults(Exporter.java:56)
+	at org.omnetpp.scave.wizard.ScaveExportWizard.lambda$1(ScaveExportWizard.java:172)
+	at org.omnetpp.scave.engine.ResultFileManager.runWithLock(ResultFileManager.java:105)
+	at org.omnetpp.scave.engine.ResultFileManager.runWithReadLock(ResultFileManager.java:94)
+	at org.omnetpp.scave.wizard.ScaveExportWizard.lambda$0(ScaveExportWizard.java:172)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY org.omnetpp.scave 4 0 2025-05-09 23:41:03.535
+!MESSAGE Error during exporting results:
+!STACK 0
+java.lang.RuntimeException: Vector file "/home/sere/Famaf/Redes/redes25lab3g21/results/General-#0.vec" changed on disk
+	at org.omnetpp.scave.engine.ScaveEngineJNI.Exporter_saveResults__SWIG_0(Native Method)
+	at org.omnetpp.scave.engine.Exporter.saveResults(Exporter.java:56)
+	at org.omnetpp.scave.wizard.ScaveExportWizard.lambda$1(ScaveExportWizard.java:172)
+	at org.omnetpp.scave.engine.ResultFileManager.runWithLock(ResultFileManager.java:105)
+	at org.omnetpp.scave.engine.ResultFileManager.runWithReadLock(ResultFileManager.java:94)
+	at org.omnetpp.scave.wizard.ScaveExportWizard.lambda$0(ScaveExportWizard.java:172)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY org.omnetpp.scave 4 0 2025-05-09 23:41:27.610
+!MESSAGE Error during exporting results:
+!STACK 0
+java.lang.RuntimeException: Vector file "/home/sere/Famaf/Redes/redes25lab3g21/results/General-#0.vec" changed on disk
+	at org.omnetpp.scave.engine.ScaveEngineJNI.Exporter_saveResults__SWIG_0(Native Method)
+	at org.omnetpp.scave.engine.Exporter.saveResults(Exporter.java:56)
+	at org.omnetpp.scave.wizard.ScaveExportWizard.lambda$1(ScaveExportWizard.java:172)
+	at org.omnetpp.scave.engine.ResultFileManager.runWithLock(ResultFileManager.java:105)
+	at org.omnetpp.scave.engine.ResultFileManager.runWithReadLock(ResultFileManager.java:94)
+	at org.omnetpp.scave.wizard.ScaveExportWizard.lambda$0(ScaveExportWizard.java:172)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY org.omnetpp.scave 4 0 2025-05-09 23:42:03.159
+!MESSAGE Error during exporting results:
+!STACK 0
+java.lang.RuntimeException: Vector file "/home/sere/Famaf/Redes/redes25lab3g21/results/General-#0.vec" changed on disk
+	at org.omnetpp.scave.engine.ScaveEngineJNI.Exporter_saveResults__SWIG_0(Native Method)
+	at org.omnetpp.scave.engine.Exporter.saveResults(Exporter.java:56)
+	at org.omnetpp.scave.wizard.ScaveExportWizard.lambda$1(ScaveExportWizard.java:172)
+	at org.omnetpp.scave.engine.ResultFileManager.runWithLock(ResultFileManager.java:105)
+	at org.omnetpp.scave.engine.ResultFileManager.runWithReadLock(ResultFileManager.java:94)
+	at org.omnetpp.scave.wizard.ScaveExportWizard.lambda$0(ScaveExportWizard.java:172)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+!SESSION 2025-05-11 21:02:04.363 -----------------------------------------------
+eclipse.buildId=6.0.1.220831-e4f07d04b8
+java.version=17.0.4
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.omnetpp.main 1 0 2025-05-11 21:02:14.994
+!MESSAGE OMNeT++ IDE 6.0.1.220831-e4f07d04b8 started.
+
+!ENTRY org.omnetpp.scave 4 0 2025-05-11 21:04:36.581
+!MESSAGE Error during exporting results:
+!STACK 0
+java.lang.RuntimeException: Error writing CSV file
+	at org.omnetpp.scave.engine.ScaveEngineJNI.Exporter_saveResults__SWIG_0(Native Method)
+	at org.omnetpp.scave.engine.Exporter.saveResults(Exporter.java:56)
+	at org.omnetpp.scave.wizard.ScaveExportWizard.lambda$1(ScaveExportWizard.java:172)
+	at org.omnetpp.scave.engine.ResultFileManager.runWithLock(ResultFileManager.java:105)
+	at org.omnetpp.scave.engine.ResultFileManager.runWithReadLock(ResultFileManager.java:94)
+	at org.omnetpp.scave.wizard.ScaveExportWizard.lambda$0(ScaveExportWizard.java:172)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+!SESSION 2025-05-12 16:51:51.612 -----------------------------------------------
+eclipse.buildId=6.0.1.220831-e4f07d04b8
+java.version=17.0.4
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.omnetpp.main 1 0 2025-05-12 16:51:59.395
+!MESSAGE OMNeT++ IDE 6.0.1.220831-e4f07d04b8 started.
+
+!ENTRY org.omnetpp.scave 4 0 2025-05-12 16:53:27.117
+!MESSAGE Error during exporting results:
+!STACK 0
+java.lang.RuntimeException: Error writing CSV file
+	at org.omnetpp.scave.engine.ScaveEngineJNI.Exporter_saveResults__SWIG_0(Native Method)
+	at org.omnetpp.scave.engine.Exporter.saveResults(Exporter.java:56)
+	at org.omnetpp.scave.wizard.ScaveExportWizard.lambda$1(ScaveExportWizard.java:172)
+	at org.omnetpp.scave.engine.ResultFileManager.runWithLock(ResultFileManager.java:105)
+	at org.omnetpp.scave.engine.ResultFileManager.runWithReadLock(ResultFileManager.java:94)
+	at org.omnetpp.scave.wizard.ScaveExportWizard.lambda$0(ScaveExportWizard.java:172)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY org.omnetpp.scave 4 0 2025-05-12 16:55:18.373
+!MESSAGE Error during exporting results:
+!STACK 0
+java.lang.RuntimeException: Error writing CSV file
+	at org.omnetpp.scave.engine.ScaveEngineJNI.Exporter_saveResults__SWIG_0(Native Method)
+	at org.omnetpp.scave.engine.Exporter.saveResults(Exporter.java:56)
+	at org.omnetpp.scave.wizard.ScaveExportWizard.lambda$1(ScaveExportWizard.java:172)
+	at org.omnetpp.scave.engine.ResultFileManager.runWithLock(ResultFileManager.java:105)
+	at org.omnetpp.scave.engine.ResultFileManager.runWithReadLock(ResultFileManager.java:94)
+	at org.omnetpp.scave.wizard.ScaveExportWizard.lambda$0(ScaveExportWizard.java:172)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY org.omnetpp.scave 4 0 2025-05-12 17:00:23.022
+!MESSAGE Error during exporting results:
+!STACK 0
+java.lang.RuntimeException: Error writing CSV file
+	at org.omnetpp.scave.engine.ScaveEngineJNI.Exporter_saveResults__SWIG_0(Native Method)
+	at org.omnetpp.scave.engine.Exporter.saveResults(Exporter.java:56)
+	at org.omnetpp.scave.wizard.ScaveExportWizard.lambda$1(ScaveExportWizard.java:172)
+	at org.omnetpp.scave.engine.ResultFileManager.runWithLock(ResultFileManager.java:105)
+	at org.omnetpp.scave.engine.ResultFileManager.runWithReadLock(ResultFileManager.java:94)
+	at org.omnetpp.scave.wizard.ScaveExportWizard.lambda$0(ScaveExportWizard.java:172)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY org.omnetpp.scave 2 0 2025-05-12 17:06:56.458
+!MESSAGE No Scave editor state was saved for file: /home/sere/Famaf/Redes/redes25lab3g21/General.anf.
+
+!ENTRY org.omnetpp.scave 4 0 2025-05-12 17:11:14.243
+!MESSAGE Unhandled exception from chart script
+!STACK 0
+py4j.Py4JException: An exception was raised by the Python Proxy. Return Message: Traceback (most recent call last):
+  File "/home/sere/omnetpp-6.0.1/ide/plugins/org.omnetpp.scave.pychart_6.0.1.220831-e4f07d04b8/python/py4j/clientserver.py", line 581, in _call_proxy
+    return_value = getattr(self.pool[obj_id], method)(*params)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sere/omnetpp-6.0.1/ide/plugins/org.omnetpp.scave.pychart_6.0.1.220831-e4f07d04b8/python/omnetpp/internal/PythonEntryPoint.py", line 111, in execute
+    from omnetpp.scave import chart, ideplot
+  File "/home/sere/omnetpp-6.0.1/ide/plugins/org.omnetpp.scave.pychart_6.0.1.220831-e4f07d04b8/python/omnetpp/scave/ideplot.py", line 38, in <module>
+    from omnetpp.scave.impl_ide import ideplot as impl
+  File "/home/sere/omnetpp-6.0.1/ide/plugins/org.omnetpp.scave.pychart_6.0.1.220831-e4f07d04b8/python/omnetpp/scave/impl_ide/ideplot.py", line 9, in <module>
+    import omnetpp.scave.impl_ide.swtplot as swtplot
+  File "/home/sere/omnetpp-6.0.1/ide/plugins/org.omnetpp.scave.pychart_6.0.1.220831-e4f07d04b8/python/omnetpp/scave/impl_ide/swtplot.py", line 9, in <module>
+    import posix_ipc
+ModuleNotFoundError: No module named 'posix_ipc'
+
+	at py4j.Protocol.getReturnValue(Protocol.java:476)
+	at py4j.reflection.PythonProxyHandler.invoke(PythonProxyHandler.java:108)
+	at jdk.proxy9/jdk.proxy9.$Proxy23.execute(Unknown Source)
+	at org.omnetpp.scave.python.ChartViewerBase.configurePythonProcess(ChartViewerBase.java:103)
+	at org.omnetpp.scave.python.NativeChartViewer.lambda$4(NativeChartViewer.java:195)
+	at org.omnetpp.scave.pychart.PythonCallerThread.lambda$1(PythonCallerThread.java:112)
+	at org.omnetpp.scave.pychart.PythonCallerThread$EventStreamRunnable.run(PythonCallerThread.java:68)
+	at org.omnetpp.scave.pychart.PythonCallerThread.run(PythonCallerThread.java:153)
+
+!ENTRY org.omnetpp.scave 4 0 2025-05-12 17:11:22.319
+!MESSAGE Unhandled exception from chart script
+!STACK 0
+py4j.Py4JException: An exception was raised by the Python Proxy. Return Message: Traceback (most recent call last):
+  File "/home/sere/omnetpp-6.0.1/ide/plugins/org.omnetpp.scave.pychart_6.0.1.220831-e4f07d04b8/python/py4j/clientserver.py", line 581, in _call_proxy
+    return_value = getattr(self.pool[obj_id], method)(*params)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sere/omnetpp-6.0.1/ide/plugins/org.omnetpp.scave.pychart_6.0.1.220831-e4f07d04b8/python/omnetpp/internal/PythonEntryPoint.py", line 111, in execute
+    from omnetpp.scave import chart, ideplot
+  File "/home/sere/omnetpp-6.0.1/ide/plugins/org.omnetpp.scave.pychart_6.0.1.220831-e4f07d04b8/python/omnetpp/scave/ideplot.py", line 38, in <module>
+    from omnetpp.scave.impl_ide import ideplot as impl
+  File "/home/sere/omnetpp-6.0.1/ide/plugins/org.omnetpp.scave.pychart_6.0.1.220831-e4f07d04b8/python/omnetpp/scave/impl_ide/ideplot.py", line 9, in <module>
+    import omnetpp.scave.impl_ide.swtplot as swtplot
+  File "/home/sere/omnetpp-6.0.1/ide/plugins/org.omnetpp.scave.pychart_6.0.1.220831-e4f07d04b8/python/omnetpp/scave/impl_ide/swtplot.py", line 9, in <module>
+    import posix_ipc
+ModuleNotFoundError: No module named 'posix_ipc'
+
+	at py4j.Protocol.getReturnValue(Protocol.java:476)
+	at py4j.reflection.PythonProxyHandler.invoke(PythonProxyHandler.java:108)
+	at jdk.proxy9/jdk.proxy9.$Proxy23.execute(Unknown Source)
+	at org.omnetpp.scave.python.ChartViewerBase.configurePythonProcess(ChartViewerBase.java:103)
+	at org.omnetpp.scave.python.NativeChartViewer.lambda$4(NativeChartViewer.java:195)
+	at org.omnetpp.scave.pychart.PythonCallerThread.lambda$1(PythonCallerThread.java:112)
+	at org.omnetpp.scave.pychart.PythonCallerThread$EventStreamRunnable.run(PythonCallerThread.java:68)
+	at org.omnetpp.scave.pychart.PythonCallerThread.run(PythonCallerThread.java:153)
+
+!ENTRY org.omnetpp.scave 4 0 2025-05-12 17:14:02.384
+!MESSAGE Error during exporting results:
+!STACK 0
+java.lang.RuntimeException: Error writing CSV file
+	at org.omnetpp.scave.engine.ScaveEngineJNI.Exporter_saveResults__SWIG_0(Native Method)
+	at org.omnetpp.scave.engine.Exporter.saveResults(Exporter.java:56)
+	at org.omnetpp.scave.wizard.ScaveExportWizard.lambda$1(ScaveExportWizard.java:172)
+	at org.omnetpp.scave.engine.ResultFileManager.runWithLock(ResultFileManager.java:105)
+	at org.omnetpp.scave.engine.ResultFileManager.runWithReadLock(ResultFileManager.java:94)
+	at org.omnetpp.scave.wizard.ScaveExportWizard.lambda$0(ScaveExportWizard.java:172)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY org.omnetpp.scave 4 0 2025-05-12 17:23:12.358
+!MESSAGE Error during exporting results:
+!STACK 0
+java.lang.RuntimeException: Vector file "/home/sere/Famaf/Redes/redes25lab3g21/results/General-#0.vec" changed on disk
+	at org.omnetpp.scave.engine.ScaveEngineJNI.Exporter_saveResults__SWIG_0(Native Method)
+	at org.omnetpp.scave.engine.Exporter.saveResults(Exporter.java:56)
+	at org.omnetpp.scave.wizard.ScaveExportWizard.lambda$1(ScaveExportWizard.java:172)
+	at org.omnetpp.scave.engine.ResultFileManager.runWithLock(ResultFileManager.java:105)
+	at org.omnetpp.scave.engine.ResultFileManager.runWithReadLock(ResultFileManager.java:94)
+	at org.omnetpp.scave.wizard.ScaveExportWizard.lambda$0(ScaveExportWizard.java:172)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+!SESSION 2025-05-12 20:10:00.408 -----------------------------------------------
+eclipse.buildId=6.0.1.220831-e4f07d04b8
+java.version=17.0.4
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.omnetpp.main 1 0 2025-05-12 20:10:08.867
+!MESSAGE OMNeT++ IDE 6.0.1.220831-e4f07d04b8 started.
+!SESSION 2025-05-20 17:40:53.881 -----------------------------------------------
+eclipse.buildId=6.0.1.220831-e4f07d04b8
+java.version=17.0.4
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.omnetpp.main 1 0 2025-05-20 17:41:01.322
+!MESSAGE OMNeT++ IDE 6.0.1.220831-e4f07d04b8 started.
+
+!ENTRY org.omnetpp.scave 2 0 2025-05-20 17:42:21.316
+!MESSAGE No Scave editor state was saved for file: /home/sere/Famaf/Redes/redes25lab4g21/results/General.anf.
+!SESSION 2025-05-20 17:44:55.578 -----------------------------------------------
+eclipse.buildId=6.0.1.220831-e4f07d04b8
+java.version=17.0.4
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.omnetpp.main 1 0 2025-05-20 17:45:43.213
+!MESSAGE OMNeT++ IDE 6.0.1.220831-e4f07d04b8 started.
+
+!ENTRY org.omnetpp.scave 2 0 2025-05-20 17:47:08.838
+!MESSAGE No Scave editor state was saved for file: /home/sere/Famaf/Redes/redes25lab4g21/results/General.anf.
+!SESSION 2025-05-25 17:38:44.711 -----------------------------------------------
+eclipse.buildId=6.0.1.220831-e4f07d04b8
+java.version=17.0.4
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 4 567 2025-05-25 17:38:49.022
+!MESSAGE Workspace restored, but some problems occurred.
+!SUBENTRY 1 org.eclipse.core.resources 4 567 2025-05-25 17:38:49.022
+!MESSAGE Could not read metadata for 'redes25lab4g21'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException(/redes25lab4g21)[567]: java.lang.Exception: The project description file (.project) for 'redes25lab4g21' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:908)
+	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:888)
+	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:868)
+	at org.eclipse.core.internal.resources.SaveManager.restore(SaveManager.java:724)
+	at org.eclipse.core.internal.resources.SaveManager.startup(SaveManager.java:1555)
+	at org.eclipse.core.internal.resources.Workspace.startup(Workspace.java:2480)
+	at org.eclipse.core.internal.resources.Workspace.open(Workspace.java:2231)
+	at org.eclipse.core.resources.ResourcesPlugin.start(ResourcesPlugin.java:475)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.lambda$2(BundleContextImpl.java:808)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:802)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:759)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1019)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:365)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:605)
+	at org.eclipse.osgi.container.Module.start(Module.java:468)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:404)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:570)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:335)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:384)
+	at org.eclipse.osgi.internal.loader.sources.SingleSourcePackage.loadClass(SingleSourcePackage.java:41)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass0(BundleLoader.java:471)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:403)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:168)
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:153)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1440)
+!SUBENTRY 2 org.eclipse.core.resources 4 567 2025-05-25 17:38:49.023
+!MESSAGE The project description file (.project) for 'redes25lab4g21' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
+!STACK 0
+java.lang.Exception: The project description file (.project) for 'redes25lab4g21' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:908)
+	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:888)
+	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:868)
+	at org.eclipse.core.internal.resources.SaveManager.restore(SaveManager.java:724)
+	at org.eclipse.core.internal.resources.SaveManager.startup(SaveManager.java:1555)
+	at org.eclipse.core.internal.resources.Workspace.startup(Workspace.java:2480)
+	at org.eclipse.core.internal.resources.Workspace.open(Workspace.java:2231)
+	at org.eclipse.core.resources.ResourcesPlugin.start(ResourcesPlugin.java:475)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.lambda$2(BundleContextImpl.java:808)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:802)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:759)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1019)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:365)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:605)
+	at org.eclipse.osgi.container.Module.start(Module.java:468)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:404)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:570)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:335)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:384)
+	at org.eclipse.osgi.internal.loader.sources.SingleSourcePackage.loadClass(SingleSourcePackage.java:41)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass0(BundleLoader.java:471)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:403)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:168)
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:153)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1440)
+
+!ENTRY org.eclipse.ui 4 4 2025-05-25 17:38:51.920
+!MESSAGE Unable to create part
+!STACK 1
+org.eclipse.ui.PartInitException: File '/redes25lab4g21/results/General.anf' does not exist
+	at org.omnetpp.scave.editors.ScaveEditor.init(ScaveEditor.java:306)
+	at org.eclipse.ui.internal.EditorReference.initialize(EditorReference.java:353)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.create(CompatibilityPart.java:344)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:995)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:960)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalInject(InjectorImpl.java:140)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:403)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:330)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:202)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:91)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:60)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:42)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.createWidget(ContributedPartRenderer.java:132)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:994)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:658)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:762)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:727)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:711)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.showTab(StackRenderer.java:1209)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.postProcess(LazyStackRenderer.java:116)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:762)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:727)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:711)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:72)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:672)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$1.run(PartRenderingEngine.java:543)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:527)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ElementReferenceRenderer.createWidget(ElementReferenceRenderer.java:73)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:994)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:658)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:762)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:727)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:711)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:72)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:150)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:672)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:762)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:727)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:711)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:72)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:150)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:672)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:762)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:727)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:711)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:72)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveRenderer.processContents(PerspectiveRenderer.java:51)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:672)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:762)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:727)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:711)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.showTab(PerspectiveStackRenderer.java:82)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.postProcess(LazyStackRenderer.java:116)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.postProcess(PerspectiveStackRenderer.java:64)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:762)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:727)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:711)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:72)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:150)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:672)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:762)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:727)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:711)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:72)
+	at org.eclipse.e4.ui.workbench.renderers.swt.WBWRenderer.processContents(WBWRenderer.java:658)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:672)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:762)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:727)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:711)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1082)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1045)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1440)
+!SUBENTRY 1 org.eclipse.ui 4 0 2025-05-25 17:38:51.922
+!MESSAGE File '/redes25lab4g21/results/General.anf' does not exist
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2025-05-25 17:38:51.924
+!MESSAGE Cannot invoke "org.eclipse.ui.IWorkbenchPartSite.setSelectionProvider(org.eclipse.jface.viewers.ISelectionProvider)" because the return value of "org.omnetpp.scave.editors.ScaveEditor.getSite()" is null
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.ui.IWorkbenchPartSite.setSelectionProvider(org.eclipse.jface.viewers.ISelectionProvider)" because the return value of "org.omnetpp.scave.editors.ScaveEditor.getSite()" is null
+	at org.omnetpp.scave.editors.ScaveEditor.dispose(ScaveEditor.java:336)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.handlePartInitException(CompatibilityPart.java:314)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.create(CompatibilityPart.java:346)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:995)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:960)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalInject(InjectorImpl.java:140)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:403)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:330)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:202)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:91)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:60)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:42)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.createWidget(ContributedPartRenderer.java:132)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:994)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:658)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:762)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:727)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:711)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.showTab(StackRenderer.java:1209)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.postProcess(LazyStackRenderer.java:116)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:762)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:727)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:711)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:72)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:672)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$1.run(PartRenderingEngine.java:543)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:527)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ElementReferenceRenderer.createWidget(ElementReferenceRenderer.java:73)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:994)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:658)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:762)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:727)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:711)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:72)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:150)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:672)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:762)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:727)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:711)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:72)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:150)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:672)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:762)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:727)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:711)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:72)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveRenderer.processContents(PerspectiveRenderer.java:51)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:672)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:762)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:727)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:711)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.showTab(PerspectiveStackRenderer.java:82)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.postProcess(LazyStackRenderer.java:116)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.postProcess(PerspectiveStackRenderer.java:64)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:762)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:727)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:711)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:72)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:150)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:672)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:762)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:727)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:711)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:72)
+	at org.eclipse.e4.ui.workbench.renderers.swt.WBWRenderer.processContents(WBWRenderer.java:658)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:672)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:762)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:727)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:711)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1082)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1045)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1440)
+
+!ENTRY org.omnetpp.main 1 0 2025-05-25 17:38:52.371
+!MESSAGE OMNeT++ IDE 6.0.1.220831-e4f07d04b8 started.
+!SESSION 2025-05-25 17:48:48.556 -----------------------------------------------
+eclipse.buildId=6.0.1.220831-e4f07d04b8
+java.version=17.0.4
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.omnetpp.main 1 0 2025-05-25 17:48:54.766
+!MESSAGE OMNeT++ IDE 6.0.1.220831-e4f07d04b8 started.
+
+!ENTRY org.eclipse.core.resources 4 567 2025-05-25 17:48:59.518
+!MESSAGE The project description file (.project) for 'redes25lab4g21' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
+!STACK 0
+java.lang.Exception: The project description file (.project) for 'redes25lab4g21' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:908)
+	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:888)
+	at org.eclipse.core.internal.resources.SaveManager.restore(SaveManager.java:763)
+	at org.eclipse.core.internal.resources.Project.open(Project.java:1060)
+	at org.eclipse.ui.actions.OpenResourceAction$1.doOpenWithReferences(OpenResourceAction.java:233)
+	at org.eclipse.ui.actions.OpenResourceAction$1.runInWorkspace(OpenResourceAction.java:279)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.omnetpp.scave 2 0 2025-05-25 17:50:10.286
+!MESSAGE No Scave editor state was saved for file: /home/sere/Famaf/Redes/redes25lab4g21/results/General.anf.
+
+!ENTRY org.omnetpp.scave 4 0 2025-05-25 18:00:06.192
+!MESSAGE Error during exporting results:
+!STACK 0
+java.lang.RuntimeException: Error writing CSV file
+	at org.omnetpp.scave.engine.ScaveEngineJNI.Exporter_saveResults__SWIG_0(Native Method)
+	at org.omnetpp.scave.engine.Exporter.saveResults(Exporter.java:56)
+	at org.omnetpp.scave.wizard.ScaveExportWizard.lambda$1(ScaveExportWizard.java:172)
+	at org.omnetpp.scave.engine.ResultFileManager.runWithLock(ResultFileManager.java:105)
+	at org.omnetpp.scave.engine.ResultFileManager.runWithReadLock(ResultFileManager.java:94)
+	at org.omnetpp.scave.wizard.ScaveExportWizard.lambda$0(ScaveExportWizard.java:172)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+!SESSION 2025-05-25 18:22:36.049 -----------------------------------------------
+eclipse.buildId=6.0.1.220831-e4f07d04b8
+java.version=17.0.4
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.omnetpp.main 1 0 2025-05-25 18:22:45.080
+!MESSAGE OMNeT++ IDE 6.0.1.220831-e4f07d04b8 started.
+
+!ENTRY org.omnetpp.scave 4 0 2025-05-25 18:32:21.729
+!MESSAGE Error during exporting results:
+!STACK 0
+java.lang.RuntimeException: Error writing CSV file
+	at org.omnetpp.scave.engine.ScaveEngineJNI.Exporter_saveResults__SWIG_0(Native Method)
+	at org.omnetpp.scave.engine.Exporter.saveResults(Exporter.java:56)
+	at org.omnetpp.scave.wizard.ScaveExportWizard.lambda$1(ScaveExportWizard.java:172)
+	at org.omnetpp.scave.engine.ResultFileManager.runWithLock(ResultFileManager.java:105)
+	at org.omnetpp.scave.engine.ResultFileManager.runWithReadLock(ResultFileManager.java:94)
+	at org.omnetpp.scave.wizard.ScaveExportWizard.lambda$0(ScaveExportWizard.java:172)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+!SESSION 2025-05-27 11:36:51.356 -----------------------------------------------
+eclipse.buildId=6.0.1.220831-e4f07d04b8
+java.version=17.0.4
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.omnetpp.main 1 0 2025-05-27 11:37:00.979
+!MESSAGE OMNeT++ IDE 6.0.1.220831-e4f07d04b8 started.
+
+!ENTRY org.eclipse.debug.ui 4 120 2025-05-27 11:37:32.963
+!MESSAGE Error within Debug UI: 
+!STACK 0
+java.lang.reflect.InvocationTargetException
+	at org.omnetpp.launch.SimulationLaunchShortcut$1.run(SimulationLaunchShortcut.java:318)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: org.eclipse.core.runtime.CoreException: Make sure to select consistent build configurations across all involved projects, i.e. they should be all debug or all release. Current settings:
+
+
+	at org.omnetpp.launch.tabs.OmnetppLaunchUtils.isReleaseBinaryRequired(OmnetppLaunchUtils.java:720)
+	at org.omnetpp.launch.tabs.OmnetppLaunchUtils.createUpdatedLaunchConfig(OmnetppLaunchUtils.java:378)
+	at org.omnetpp.launch.SimulationRunLaunchDelegate.getProjectsForProblemSearch(SimulationRunLaunchDelegate.java:200)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.finalLaunchCheck(LaunchConfigurationDelegate.java:157)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:788)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.omnetpp.launch.SimulationLaunchShortcut$1.run(SimulationLaunchShortcut.java:315)
+	... 1 more
+Root exception:
+org.eclipse.core.runtime.CoreException: Make sure to select consistent build configurations across all involved projects, i.e. they should be all debug or all release. Current settings:
+
+
+	at org.omnetpp.launch.tabs.OmnetppLaunchUtils.isReleaseBinaryRequired(OmnetppLaunchUtils.java:720)
+	at org.omnetpp.launch.tabs.OmnetppLaunchUtils.createUpdatedLaunchConfig(OmnetppLaunchUtils.java:378)
+	at org.omnetpp.launch.SimulationRunLaunchDelegate.getProjectsForProblemSearch(SimulationRunLaunchDelegate.java:200)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.finalLaunchCheck(LaunchConfigurationDelegate.java:157)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:788)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.omnetpp.launch.SimulationLaunchShortcut$1.run(SimulationLaunchShortcut.java:315)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY org.omnetpp.launch 4 0 2025-05-27 11:45:31.790
+!MESSAGE Make sure to select consistent build configurations across all involved projects, i.e. they should be all debug or all release. Current settings:
+
+
+!SESSION 2025-06-03 10:19:06.101 -----------------------------------------------
+eclipse.buildId=6.0.1.220831-e4f07d04b8
+java.version=17.0.4
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.omnetpp.main 1 0 2025-06-03 10:19:14.308
+!MESSAGE OMNeT++ IDE 6.0.1.220831-e4f07d04b8 started.
+
+!ENTRY org.omnetpp.scave 4 0 2025-06-03 10:21:02.284
+!MESSAGE Unhandled exception from chart script
+!STACK 0
+py4j.Py4JException: An exception was raised by the Python Proxy. Return Message: Traceback (most recent call last):
+  File "/home/sere/omnetpp-6.0.1/ide/plugins/org.omnetpp.scave.pychart_6.0.1.220831-e4f07d04b8/python/py4j/clientserver.py", line 581, in _call_proxy
+    return_value = getattr(self.pool[obj_id], method)(*params)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sere/omnetpp-6.0.1/ide/plugins/org.omnetpp.scave.pychart_6.0.1.220831-e4f07d04b8/python/omnetpp/internal/PythonEntryPoint.py", line 111, in execute
+    from omnetpp.scave import chart, ideplot
+  File "/home/sere/omnetpp-6.0.1/ide/plugins/org.omnetpp.scave.pychart_6.0.1.220831-e4f07d04b8/python/omnetpp/scave/ideplot.py", line 38, in <module>
+    from omnetpp.scave.impl_ide import ideplot as impl
+  File "/home/sere/omnetpp-6.0.1/ide/plugins/org.omnetpp.scave.pychart_6.0.1.220831-e4f07d04b8/python/omnetpp/scave/impl_ide/ideplot.py", line 9, in <module>
+    import omnetpp.scave.impl_ide.swtplot as swtplot
+  File "/home/sere/omnetpp-6.0.1/ide/plugins/org.omnetpp.scave.pychart_6.0.1.220831-e4f07d04b8/python/omnetpp/scave/impl_ide/swtplot.py", line 9, in <module>
+    import posix_ipc
+ModuleNotFoundError: No module named 'posix_ipc'
+
+	at py4j.Protocol.getReturnValue(Protocol.java:476)
+	at py4j.reflection.PythonProxyHandler.invoke(PythonProxyHandler.java:108)
+	at jdk.proxy9/jdk.proxy9.$Proxy23.execute(Unknown Source)
+	at org.omnetpp.scave.python.ChartViewerBase.configurePythonProcess(ChartViewerBase.java:103)
+	at org.omnetpp.scave.python.NativeChartViewer.lambda$4(NativeChartViewer.java:195)
+	at org.omnetpp.scave.pychart.PythonCallerThread.lambda$1(PythonCallerThread.java:112)
+	at org.omnetpp.scave.pychart.PythonCallerThread$EventStreamRunnable.run(PythonCallerThread.java:68)
+	at org.omnetpp.scave.pychart.PythonCallerThread.run(PythonCallerThread.java:153)
+
+!ENTRY org.omnetpp.scave 4 0 2025-06-03 10:21:15.997
+!MESSAGE Unhandled exception from chart script
+!STACK 0
+py4j.Py4JException: An exception was raised by the Python Proxy. Return Message: Traceback (most recent call last):
+  File "/home/sere/omnetpp-6.0.1/ide/plugins/org.omnetpp.scave.pychart_6.0.1.220831-e4f07d04b8/python/py4j/clientserver.py", line 581, in _call_proxy
+    return_value = getattr(self.pool[obj_id], method)(*params)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sere/omnetpp-6.0.1/ide/plugins/org.omnetpp.scave.pychart_6.0.1.220831-e4f07d04b8/python/omnetpp/internal/PythonEntryPoint.py", line 111, in execute
+    from omnetpp.scave import chart, ideplot
+  File "/home/sere/omnetpp-6.0.1/ide/plugins/org.omnetpp.scave.pychart_6.0.1.220831-e4f07d04b8/python/omnetpp/scave/ideplot.py", line 38, in <module>
+    from omnetpp.scave.impl_ide import ideplot as impl
+  File "/home/sere/omnetpp-6.0.1/ide/plugins/org.omnetpp.scave.pychart_6.0.1.220831-e4f07d04b8/python/omnetpp/scave/impl_ide/ideplot.py", line 9, in <module>
+    import omnetpp.scave.impl_ide.swtplot as swtplot
+  File "/home/sere/omnetpp-6.0.1/ide/plugins/org.omnetpp.scave.pychart_6.0.1.220831-e4f07d04b8/python/omnetpp/scave/impl_ide/swtplot.py", line 9, in <module>
+    import posix_ipc
+ModuleNotFoundError: No module named 'posix_ipc'
+
+	at py4j.Protocol.getReturnValue(Protocol.java:476)
+	at py4j.reflection.PythonProxyHandler.invoke(PythonProxyHandler.java:108)
+	at jdk.proxy9/jdk.proxy9.$Proxy23.execute(Unknown Source)
+	at org.omnetpp.scave.python.ChartViewerBase.configurePythonProcess(ChartViewerBase.java:103)
+	at org.omnetpp.scave.python.NativeChartViewer.lambda$4(NativeChartViewer.java:195)
+	at org.omnetpp.scave.pychart.PythonCallerThread.lambda$1(PythonCallerThread.java:112)
+	at org.omnetpp.scave.pychart.PythonCallerThread$EventStreamRunnable.run(PythonCallerThread.java:68)
+	at org.omnetpp.scave.pychart.PythonCallerThread.run(PythonCallerThread.java:153)
+
+!ENTRY org.omnetpp.scave 4 0 2025-06-03 10:21:39.073
+!MESSAGE Unhandled exception from chart script
+!STACK 0
+py4j.Py4JException: An exception was raised by the Python Proxy. Return Message: Traceback (most recent call last):
+  File "/home/sere/omnetpp-6.0.1/ide/plugins/org.omnetpp.scave.pychart_6.0.1.220831-e4f07d04b8/python/py4j/clientserver.py", line 581, in _call_proxy
+    return_value = getattr(self.pool[obj_id], method)(*params)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sere/omnetpp-6.0.1/ide/plugins/org.omnetpp.scave.pychart_6.0.1.220831-e4f07d04b8/python/omnetpp/internal/PythonEntryPoint.py", line 111, in execute
+    from omnetpp.scave import chart, ideplot
+  File "/home/sere/omnetpp-6.0.1/ide/plugins/org.omnetpp.scave.pychart_6.0.1.220831-e4f07d04b8/python/omnetpp/scave/ideplot.py", line 38, in <module>
+    from omnetpp.scave.impl_ide import ideplot as impl
+  File "/home/sere/omnetpp-6.0.1/ide/plugins/org.omnetpp.scave.pychart_6.0.1.220831-e4f07d04b8/python/omnetpp/scave/impl_ide/ideplot.py", line 9, in <module>
+    import omnetpp.scave.impl_ide.swtplot as swtplot
+  File "/home/sere/omnetpp-6.0.1/ide/plugins/org.omnetpp.scave.pychart_6.0.1.220831-e4f07d04b8/python/omnetpp/scave/impl_ide/swtplot.py", line 9, in <module>
+    import posix_ipc
+ModuleNotFoundError: No module named 'posix_ipc'
+
+	at py4j.Protocol.getReturnValue(Protocol.java:476)
+	at py4j.reflection.PythonProxyHandler.invoke(PythonProxyHandler.java:108)
+	at jdk.proxy9/jdk.proxy9.$Proxy23.execute(Unknown Source)
+	at org.omnetpp.scave.python.ChartViewerBase.configurePythonProcess(ChartViewerBase.java:103)
+	at org.omnetpp.scave.python.NativeChartViewer.lambda$4(NativeChartViewer.java:195)
+	at org.omnetpp.scave.pychart.PythonCallerThread.lambda$1(PythonCallerThread.java:112)
+	at org.omnetpp.scave.pychart.PythonCallerThread$EventStreamRunnable.run(PythonCallerThread.java:68)
+	at org.omnetpp.scave.pychart.PythonCallerThread.run(PythonCallerThread.java:153)
+!SESSION 2025-06-03 11:24:54.267 -----------------------------------------------
+eclipse.buildId=6.0.1.220831-e4f07d04b8
+java.version=17.0.4
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.omnetpp.main 1 0 2025-06-03 11:25:37.564
+!MESSAGE OMNeT++ IDE 6.0.1.220831-e4f07d04b8 started.
+!SESSION 2025-06-03 11:50:36.393 -----------------------------------------------
+eclipse.buildId=6.0.1.220831-e4f07d04b8
+java.version=17.0.4
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.omnetpp.main 1 0 2025-06-03 11:50:43.331
+!MESSAGE OMNeT++ IDE 6.0.1.220831-e4f07d04b8 started.
+!SESSION 2025-06-03 12:08:10.158 -----------------------------------------------
+eclipse.buildId=6.0.1.220831-e4f07d04b8
+java.version=17.0.4
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.omnetpp.main 1 0 2025-06-03 12:08:16.637
+!MESSAGE OMNeT++ IDE 6.0.1.220831-e4f07d04b8 started.
+!SESSION 2025-06-03 12:31:02.344 -----------------------------------------------
+eclipse.buildId=6.0.1.220831-e4f07d04b8
+java.version=17.0.4
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.omnetpp.main 1 0 2025-06-03 12:31:08.853
+!MESSAGE OMNeT++ IDE 6.0.1.220831-e4f07d04b8 started.
+!SESSION 2025-06-03 12:45:18.903 -----------------------------------------------
+eclipse.buildId=6.0.1.220831-e4f07d04b8
+java.version=17.0.4
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.omnetpp.main 1 0 2025-06-03 12:45:26.135
+!MESSAGE OMNeT++ IDE 6.0.1.220831-e4f07d04b8 started.

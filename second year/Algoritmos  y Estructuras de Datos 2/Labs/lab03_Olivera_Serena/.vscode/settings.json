@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "array_helpers.h": "c"
+    },
+    "C_Cpp.errorSquiggles": "enabled"
+}
